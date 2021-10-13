@@ -33,7 +33,7 @@ $this->pageTitle=Yii::app()->name . ' - Login';
         Looks good!
       </div>
 		<div class="form-group">
-			<input type="password" name="Login[senha]" required class="form-control" placeholder="Senha">
+			<input type="password" name="Login[senha]" required class="form-control <?php if($model->hasErrors('senha')) echo 'is-invalid'?>" placeholder="Senha">
 		</div>
 		<button class="btn btn-conexa btn-block mb-3">Entrar</button>
 	</form>

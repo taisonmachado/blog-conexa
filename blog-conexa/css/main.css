@@ -271,3 +271,11 @@ div.search-form
 	color: #fff;
     background: #f86011;
 }
+
+.text {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 5; /* number of lines to show */
+	-webkit-box-orient: vertical;
+ }

@@ -12,7 +12,7 @@
 <small>Publicado em: <?php echo Util::dataHora($model->data);?></small>
 <br>
 <p class="font-weight-bold text-dark">Autor(a): <?php echo GxHtml::encode($model->usuario->nome); ?></p>
-<p class="mt-3"><?php echo GxHtml::encode($model->texto);?></p>
+<p class="mt-3"><?php echo nl2br($model->texto);?></p>
 
 
 <h4>Comentários</h4>
@@ -24,9 +24,9 @@
 			'buttons' => 'create',
 		));
 	} else {
-		echo GxHtml::openTag('h6');
-		echo "Faça login para comentar*";
-		echo GxHtml::closeTag('h6');
+		echo '<div class="alert alert-primary" role="alert">
+			Faça <a href="index.php?r=site/login">login</a> para comentar.
+	  	</div>';
 	}
 	echo GxHtml::openTag('div', array('class' => 'mt-4'));
 	echo '<hr>';

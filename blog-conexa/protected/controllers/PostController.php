@@ -71,7 +71,14 @@ class PostController extends GxController {
 	}
 
 	public function actionIndex() {
-		$dataProvider = new CActiveDataProvider('Post');
+		$dataProvider = new CActiveDataProvider('Post', array(
+			'criteria' => array(
+				'order' => 'data DESC',
+				// 'with' => 'categoria',
+			),
+			'pagination' => array(
+				'pageSize' => 1
+		)));
 		$this->render('index', array(
 			'titulo' => 'Posts',
 			'dataProvider' => $dataProvider,

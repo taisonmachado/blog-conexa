@@ -242,7 +242,7 @@ return array (
   '{attribute} is in the list.' => '{attribute} está na lista.',
   '{attribute} is invalid.' => '{attribute} é inválido.',
   '{attribute} is not a valid URL.' => '{attribute} não é uma URL válida.',
-  '{attribute} is not a valid email address.' => '{attribute} não é um endereço de e-mail válido.',
+  '{attribute} is not a valid email address.' => 'O e-mail não é um endereço válido.',
   '{attribute} is not in the list.' => '{attribute} não está na lista.',
   '{attribute} is of the wrong length (should be {length} characters).' => '{attribute} está com tamanho errado (deve ter {length} caracteres).',
   '{attribute} is too big (maximum is {max}).' => '{attribute} é muito grande (máximo é {max}).',

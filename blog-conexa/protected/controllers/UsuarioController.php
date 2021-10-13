@@ -10,15 +10,18 @@ class UsuarioController extends GxController {
 			// $model->setAttributes($_POST['Usuario']);
 			$usuario = $_POST['Usuario'];
 			$model->email = $usuario['email'];
-			$model->senha = $model->hashSenha($usuario['senha']);
+			$model->senha = $usuario['senha'];
 			$model->nome = $usuario['nome'];
 			$model->data_nascimento = $usuario['data_nascimento'];
 			$model->telefone = $usuario['telefone'];
-			if ($model->save()) {
-				if (Yii::app()->getRequest()->getIsAjaxRequest())
-					Yii::app()->end();
-				else
-					$this->redirect(array('view', 'id' => $model->usuario_id));
+			if($model->validate()){
+				$model->senha = $model->hashSenha($usuario['senha']);
+				if ($model->save()) {
+					if (Yii::app()->getRequest()->getIsAjaxRequest())
+						Yii::app()->end();
+					else
+						$this->redirect('index.php?r=site/login');
+				}
 			}
 		}
 

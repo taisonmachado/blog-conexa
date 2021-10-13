@@ -47,6 +47,7 @@ abstract class BaseUsuario extends GxActiveRecord {
 			array('email, senha, nome', 'required', 'on' => 'cadastro'),
 			array('email, senha', 'required', 'on' => 'login'),
 			array('email', 'email'),
+			array('senha','length', 'min' => 6),
 			array('email', 'unique', 'on'=>'cadastro'),
 			// array('data_nascimento', 'type', 'type'=>'date'),
 			array('telefone', 'length', 'max'=>20),
@@ -90,6 +91,8 @@ abstract class BaseUsuario extends GxActiveRecord {
  
     public function hashSenha($password)
     {
+		if($password == '')
+			return '';
         return CPasswordHelper::hashPassword($password);
     }
 
@@ -117,8 +120,8 @@ abstract class BaseUsuario extends GxActiveRecord {
 		{
 			// $duration=$this->rememberMe ? 3600*24*30 : 0; // 30 days
 			// Yii::app()->user->login($this->_identity,$duration);
-			Yii::app()->user->login($this->_identity);
-			return true;
+			//Yii::app()->user->login($this->_identity);
+			return Yii::app()->user->login($this->_identity);;
 		}
 		else
 			return false;

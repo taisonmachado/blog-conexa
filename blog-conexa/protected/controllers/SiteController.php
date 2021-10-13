@@ -79,8 +79,12 @@ class SiteController extends Controller
 			$model->email=$login['email'];
 			$model->senha=$login['senha'];
 			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login()){
-				$this->redirect(Yii::app()->user->returnUrl);
+			if($model->validate()){
+				if($model->login()){
+					$this->redirect(Yii::app()->user->returnUrl);
+				} else {
+					$model->addError('senha', 'Senha inválida');
+				}
 			}
 		}
 		// display the login form

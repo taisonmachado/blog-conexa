@@ -25,7 +25,8 @@
 <body>
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="/"><?php echo Yii::app()->name ?></a>
+		<!-- <a class="navbar-brand" href="/"><?php echo Yii::app()->name ?></a> -->
+		<a class="navbar-brand" href="/"><img width="150" src="<?php echo Yii::app()->request->baseUrl; ?>/images/conexa.png" alt=""></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -102,59 +103,7 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.11.2/jquery.mask.min.js" integrity="sha512-Y/GIYsd+LaQm6bGysIClyez2HGCIN1yrs94wUrHoRAD5RSURkqqVQEU6mM51O90hqS80ABFTGtiDpSXd2O05nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script>
-		$(document).ready(function() {
-			$('.date').mask('00/00/0000');
-			$('.time').mask('00:00:00');
-			$('.date_time').mask('00/00/0000 00:00:00');
-			$('.cep').mask('00000-000');
-			$('.phone').mask('(00) 00000-0000');
-			$('.phone_us').mask('(000) 000-0000');
-			$('.mixed').mask('AAA 000-S0S');
-			$('.cpf').mask('000.000.000-00', {
-				reverse: true
-			});
-			$('.cnpj').mask('00.000.000/0000-00', {
-				reverse: true
-			});
-			$('.money').mask('000.000.000.000.000,00', {
-				reverse: true
-			});
-			$('.money2').mask("#.##0,00", {
-				reverse: true
-			});
-			$('.ip_address').mask('0ZZ.0ZZ.0ZZ.0ZZ', {
-				translation: {
-					'Z': {
-						pattern: /[0-9]/,
-						optional: true
-					}
-				}
-			});
-			$('.ip_address').mask('099.099.099.099');
-			$('.percent').mask('##0,00%', {
-				reverse: true
-			});
-			$('.clear-if-not-match').mask("00/00/0000", {
-				clearIfNotMatch: true
-			});
-			$('.placeholder').mask("00/00/0000", {
-				placeholder: "__/__/____"
-			});
-			$('.fallback').mask("00r00r0000", {
-				translation: {
-					'r': {
-						pattern: /[\/]/,
-						fallback: '/'
-					},
-					placeholder: "__/__/____"
-				}
-			});
-			$('.selectonfocus').mask("00/00/0000", {
-				selectOnFocus: true
-			});
-		});
-	</script>
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/app.js"></script>
 </body>
 
 </html>

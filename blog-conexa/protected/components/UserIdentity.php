@@ -34,7 +34,7 @@ class UserIdentity extends CUserIdentity
 			$this->_id = $usuario->usuario_id;
 			$this->username = $usuario->email;
 			$this->errorCode=self::ERROR_NONE;
-		return !$this->errorCode;
+		return $this->errorCode;
 	}
 
 	public function getId() 
