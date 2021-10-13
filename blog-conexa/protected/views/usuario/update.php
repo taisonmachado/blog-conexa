@@ -1,22 +1,53 @@
-<?php
+<h1>Meus dados</h1>
 
-$this->breadcrumbs = array(
-	$model->label(2) => array('index'),
-	GxHtml::valueEx($model) => array('view', 'id' => GxActiveRecord::extractPkValue($model, true)),
-	'Update',
-);
+<div class="form">
 
-$this->menu = array(
-	array('label' => 'List' . ' ' . $model->label(2), 'url'=>array('index')),
-	array('label' => 'Create' . ' ' . $model->label(), 'url'=>array('create')),
-	array('label' => 'View' . ' ' . $model->label(), 'url'=>array('view', 'id' => GxActiveRecord::extractPkValue($model, true))),
-	array('label' => 'Manage' . ' ' . $model->label(2), 'url'=>array('admin')),
-);
-?>
+	<?php $form = $this->beginWidget('GxActiveForm', array(
+		'id' => 'usuario-form-edit',
+		'enableAjaxValidation' => false,
+	));
+	?>
 
-<h1><?php echo 'Update' . ' ' . GxHtml::encode($model->label()) . ' ' . GxHtml::encode(GxHtml::valueEx($model)); ?></h1>
+	<p class="note">
+		Campos Obrigatórios<span class="required">*</span>.
+	</p>
 
-<?php
-$this->renderPartial('_form', array(
-		'model' => $model));
-?>
+	<?php echo $form->errorSummary($model); ?>
+	<div class="row">
+		<div class="col-md">
+			<div class="form-group">
+				<?php echo $form->labelEx($model, 'nome'); ?>
+				<?php echo $form->textField($model, 'nome', array('maxlength' => 100, 'class' => 'form-control')); ?>
+				<?php echo $form->error($model, 'nome'); ?>
+			</div><!-- form-group -->
+		</div>
+		<div class="col-md">
+			<div class="form-group">
+				<?php echo $form->labelEx($model, 'email'); ?>
+				<?php echo $form->textField($model, 'email', array('maxlength' => 100, 'class' => 'form-control')); ?>
+				<?php echo $form->error($model, 'email'); ?>
+			</div><!-- form-group -->
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md">
+			<div class="form-group">
+				<?php echo $form->labelEx($model, 'telefone'); ?>
+				<?php echo $form->textField($model, 'telefone', array('maxlength' => 20, 'class' => 'form-control phone')); ?>
+				<?php echo $form->error($model, 'telefone'); ?>
+			</div>
+		</div>
+		<div class="col-md">
+		<div class="form-group">
+				<?php echo $form->labelEx($model, 'data_nascimento'); ?>
+				<?php echo $form->dateField($model, 'data_nascimento', array('class' => 'form-control')); ?>
+				<?php echo $form->error($model, 'data_nascimento'); ?>
+			</div>
+		</div>
+	</div>
+
+	<?php
+	echo GxHtml::submitButton('Salvar', array('class' => 'btn btn-conexa'));
+	$this->endWidget();
+	?>
+</div><!-- form -->

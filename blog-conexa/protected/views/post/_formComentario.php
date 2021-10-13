@@ -14,7 +14,7 @@
 		</div><!-- row -->
 <div class="d-flex justify-content-end">
 <?php
-echo GxHtml::submitButton('Comentar', array('class' => 'btn btn-secondary btn-sm mt-0'));
+echo GxHtml::submitButton('Comentar', array('class' => 'btn btn-secondary btn-sm mt-0', 'id' => 'btnComentar', 'disabled' => true));
 echo "</div>";
 $this->endWidget();
 ?>

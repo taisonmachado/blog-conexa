@@ -258,7 +258,7 @@ div.search-form
 	width: 100%!important;
 }
 
-#usuario-form .col-md {
+form .col-md {
 	padding-left: 0;
 }
 
@@ -279,3 +279,7 @@ div.search-form
 	-webkit-line-clamp: 5; /* number of lines to show */
 	-webkit-box-orient: vertical;
  }
+
+#usuario-form{
+	width: 400px;
+}

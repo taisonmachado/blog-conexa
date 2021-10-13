@@ -2,7 +2,7 @@
 
 class ComentarioController extends GxController {
 
-	public function actionDelete($id) {
+	public function actionExcluir($id) {
 		$comentario = $this->loadModel($id, 'Comentario');
 		$post_id = $comentario->post_id;
 		if (!Yii::app()->user->isGuest && ($comentario->usuario_id == Yii::app()->user->id || $comentario->post->usuario_id == Yii::app()->user->id)) {

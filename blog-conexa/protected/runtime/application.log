@@ -4173,3 +4173,115 @@ Stack trace:
 REQUEST_URI=/index.php?r=usuario/view&id=9
 HTTP_REFERER=http://localhost:8000/index.php?r=usuario/cadastro
 ---
+2021/10/13 13:26:45 [error] [exception.CHttpException.404] CHttpException: O sistema não foi capaz de encontrar a ação "create" solicitada. in C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php:486
+Stack trace:
+#0 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(270): CController->missingAction('create')
+#1 C:\Users\Taison\Desktop\blog-conexa\framework\web\CWebApplication.php(282): CController->run('create')
+#2 C:\Users\Taison\Desktop\blog-conexa\framework\web\CWebApplication.php(141): CWebApplication->runController('post/create')
+#3 C:\Users\Taison\Desktop\blog-conexa\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Users\Taison\Desktop\blog-conexa\blog-conexa\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=post/create
+HTTP_REFERER=http://localhost:8000/index.php?r=post/create
+---
+2021/10/13 14:09:34 [error] [exception.CHttpException.400] CHttpException: Sua requisição é inválida. in C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php:337
+Stack trace:
+#0 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\Users\Taison\Desktop\blog-conexa\framework\web\CWebApplication.php(282): CController->run('editar')
+#4 C:\Users\Taison\Desktop\blog-conexa\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/editar')
+#5 C:\Users\Taison\Desktop\blog-conexa\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#6 C:\Users\Taison\Desktop\blog-conexa\blog-conexa\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php?r=usuario/editar
+---
+2021/10/13 14:10:00 [error] [exception.CHttpException.400] CHttpException: Sua requisição é inválida. in C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php:337
+Stack trace:
+#0 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\Users\Taison\Desktop\blog-conexa\framework\web\CWebApplication.php(282): CController->run('editar')
+#4 C:\Users\Taison\Desktop\blog-conexa\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/editar')
+#5 C:\Users\Taison\Desktop\blog-conexa\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#6 C:\Users\Taison\Desktop\blog-conexa\blog-conexa\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php?r=usuario/editar
+---
+2021/10/13 14:10:11 [error] [exception.CHttpException.400] CHttpException: Sua requisição é inválida. in C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php:337
+Stack trace:
+#0 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\Users\Taison\Desktop\blog-conexa\framework\web\CWebApplication.php(282): CController->run('editar')
+#4 C:\Users\Taison\Desktop\blog-conexa\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/editar')
+#5 C:\Users\Taison\Desktop\blog-conexa\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#6 C:\Users\Taison\Desktop\blog-conexa\blog-conexa\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php?r=usuario/editar
+---
+2021/10/13 14:15:06 [error] [php] Undefined variable: form (C:\Users\Taison\Desktop\blog-conexa\blog-conexa\protected\views\usuario\update.php:9)
+Stack trace:
+#0 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(872): UsuarioController->renderFile()
+#1 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(785): UsuarioController->renderPartial()
+#2 C:\Users\Taison\Desktop\blog-conexa\blog-conexa\protected\controllers\UsuarioController.php(44): UsuarioController->render()
+#3 C:\Users\Taison\Desktop\blog-conexa\framework\web\actions\CInlineAction.php(49): UsuarioController->actionEditar()
+#4 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Users\Taison\Desktop\blog-conexa\framework\web\filters\CFilterChain.php(134): UsuarioController->runAction()
+#6 C:\Users\Taison\Desktop\blog-conexa\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#8 C:\Users\Taison\Desktop\blog-conexa\framework\web\filters\CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#9 C:\Users\Taison\Desktop\blog-conexa\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(265): UsuarioController->runActionWithFilters()
+#12 C:\Users\Taison\Desktop\blog-conexa\framework\web\CWebApplication.php(282): UsuarioController->run()
+#13 C:\Users\Taison\Desktop\blog-conexa\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\Users\Taison\Desktop\blog-conexa\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Users\Taison\Desktop\blog-conexa\blog-conexa\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=usuario/editar
+in C:\Users\Taison\Desktop\blog-conexa\blog-conexa\protected\views\usuario\update.php (9)
+in C:\Users\Taison\Desktop\blog-conexa\blog-conexa\protected\controllers\UsuarioController.php (44)
+in C:\Users\Taison\Desktop\blog-conexa\blog-conexa\index.php (13)
+2021/10/13 14:16:25 [error] [exception.CHttpException.404] CHttpException: O sistema não foi capaz de encontrar a ação "view" solicitada. in C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php:486
+Stack trace:
+#0 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\Users\Taison\Desktop\blog-conexa\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\Users\Taison\Desktop\blog-conexa\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/view')
+#3 C:\Users\Taison\Desktop\blog-conexa\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\Users\Taison\Desktop\blog-conexa\blog-conexa\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=usuario/view&id=13
+HTTP_REFERER=http://localhost:8000/index.php?r=usuario/editar
+---
+2021/10/13 14:46:07 [error] [exception.CException] CException: A propriedade "GxActiveForm.class" não está definida. in C:\Users\Taison\Desktop\blog-conexa\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\Users\Taison\Desktop\blog-conexa\framework\web\CWidgetFactory.php(161): CComponent->__set('class', 'usuario-form')
+#1 C:\Users\Taison\Desktop\blog-conexa\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UsuarioController), 'GxActiveForm', Array)
+#2 C:\Users\Taison\Desktop\blog-conexa\framework\web\CBaseController.php(198): CBaseController->createWidget('GxActiveForm', Array)
+#3 C:\Users\Taison\Desktop\blog-conexa\blog-conexa\protected\views\usuario\_form.php(5): CBaseController->beginWidget('GxActiveForm', Array)
+#4 C:\Users\Taison\Desktop\blog-conexa\framework\web\CBaseController.php(126): require('C:\\Users\\Taison...')
+#5 C:\Users\Taison\Desktop\blog-conexa\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\Users\\Taison...', Array, true)
+#6 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(872): CBaseController->renderFile('C:\\Users\\Taison...', Array, true)
+#7 C:\Users\Taison\Desktop\blog-conexa\blog-conexa\protected\views\usuario\create.php(6): CController->renderPartial('_form', Array)
+#8 C:\Users\Taison\Desktop\blog-conexa\framework\web\CBaseController.php(126): require('C:\\Users\\Taison...')
+#9 C:\Users\Taison\Desktop\blog-conexa\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\Users\\Taison...', Array, true)
+#10 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(872): CBaseController->renderFile('C:\\Users\\Taison...', Array, true)
+#11 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#12 C:\Users\Taison\Desktop\blog-conexa\blog-conexa\protected\controllers\UsuarioController.php(29): CController->render('create', Array)
+#13 C:\Users\Taison\Desktop\blog-conexa\framework\web\actions\CInlineAction.php(49): UsuarioController->actionCadastro()
+#14 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\Users\Taison\Desktop\blog-conexa\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 C:\Users\Taison\Desktop\blog-conexa\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#18 C:\Users\Taison\Desktop\blog-conexa\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\Users\Taison\Desktop\blog-conexa\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\Users\Taison\Desktop\blog-conexa\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\Users\Taison\Desktop\blog-conexa\framework\web\CWebApplication.php(282): CController->run('cadastro')
+#23 C:\Users\Taison\Desktop\blog-conexa\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/cadastr...')
+#24 C:\Users\Taison\Desktop\blog-conexa\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#25 C:\Users\Taison\Desktop\blog-conexa\blog-conexa\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/index.php?r=usuario/cadastro
+HTTP_REFERER=http://localhost:8000/index.php?r=site/login
+---

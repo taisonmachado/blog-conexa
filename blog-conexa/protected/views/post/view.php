@@ -2,7 +2,7 @@
 	<h6 class="categoria-post"><?php echo GxHtml::encode(GxHtml::valueEx($model->categoria)); ?></h6>
 	<?php if(!Yii::app()->user->isGuest && Yii::app()->user->id == $model->usuario->usuario_id) { ?>
 	<div>
-		<a href="/index.php?r=post/update&id=<?php echo $model->post_id ?>" title="Editar Post" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
+		<a href="/index.php?r=post/editar&id=<?php echo $model->post_id ?>" title="Editar Post" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
 		<button onclick="excluirPostagem('<?php echo $model->post_id ?>')" title="Excluir Post" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
 	</div>
 	<?php } ?>
@@ -59,19 +59,3 @@
 	echo GxHtml::closeTag('div');
 ?>
 </div>
-
-<script>
-	function excluirComentario(comentarioId) {
-		let url = "index.php?r=comentario/delete&id=" + comentarioId;
-		$('#modalExcluirTitulo').html('Excluir comentário?');
-		$('#modalExcluir').modal('show');
-		$('#modalBtnExcluir').attr('href', url);
-	}
-
-	function excluirPostagem(postagemId) {
-		let url = "index.php?r=post/delete&id=" + postagemId;
-		$('#modalExcluirTitulo').html('Tem certeza que deseja excluir esse post?');
-		$('#modalExcluir').modal('show');
-		$('#modalBtnExcluir').attr('href', url);
-	}
-</script>

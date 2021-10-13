@@ -4,7 +4,7 @@
 		<h6 class="categoria-post"><?php echo GxHtml::encode(GxHtml::valueEx($data->categoria)); ?></h6>
 		<?php if(!Yii::app()->user->isGuest && Yii::app()->user->id == $data->usuario->usuario_id) { ?>
 		<div>
-			<a href="/index.php?r=post/update&id=<?php echo $data->post_id ?>" title="Editar Post" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
+			<a href="/index.php?r=post/editar&id=<?php echo $data->post_id ?>" title="Editar Post" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
 			<button onclick="excluirPostagem('<?php echo $data->post_id ?>')" title="Excluir Post" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
 		</div>
 		<?php } ?>

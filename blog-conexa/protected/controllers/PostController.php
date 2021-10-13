@@ -13,7 +13,7 @@ class PostController extends GxController {
 		));
 	}
 
-	public function actionCreate() {
+	public function actionCadastro() {
 		$model = new Post;
 
 
@@ -41,7 +41,7 @@ class PostController extends GxController {
 		$this->render('create', array( 'model' => $model));
 	}
 
-	public function actionUpdate($id) {
+	public function actionEditar($id) {
 		$model = $this->loadModel($id, 'Post');
 
 
@@ -59,7 +59,7 @@ class PostController extends GxController {
 		));
 	}
 
-	public function actionDelete($id) {
+	public function actionExcluir($id) {
 		$post = $this->loadModel($id, 'Post');
 		// if (Yii::app()->getRequest()->getIsPostRequest()) {
 		if (!Yii::app()->user->isGuest && Yii::app()->user->id == $post->usuario_id) {
@@ -109,7 +109,7 @@ class PostController extends GxController {
 
 	public function actionSearch()
 	{
-		if(!isset($_REQUEST['q']))
+		if(!isset($_REQUEST['q']) || trim($_REQUEST['q']) === '')
 			$this->redirect(array('index'));
 		
 		$search = $_REQUEST['q'];

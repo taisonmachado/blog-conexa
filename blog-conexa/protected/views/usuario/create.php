@@ -1,4 +1,4 @@
-<h1>Cadastre-se:</h1>
+<h1 class="text-center mb-3">Cadastre-se:</h1>
 
 <?php
 $this->renderPartial('_form', array(

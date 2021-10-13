@@ -5,14 +5,15 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="language" content="pt-br">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- blueprint CSS framework -->
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection">
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print">
-	<!--[if lt IE 8]>
+	<!-- [if lt IE 8]>
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection">
-	<![endif]-->
-
+	<![endif] -->
+	
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
@@ -48,8 +49,8 @@
 			</ul>
 			<div class="row">
 				<form class="form-inline my-2 my-lg-0" action="/index.php?r=post/search" method="POST">
-					<input class="form-control mr-sm-2" type="search" placeholder="Procurar" aria-label="Search" name="q">
-					<button class="btn btn-outline-conexa my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+					<input id="inputSearch" class="form-control mr-sm-2" type="search" placeholder="Procurar" name="q">
+					<button disabled id="btnSearch" class="btn btn-outline-conexa my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
 				</form>
 				<ul class="navbar-nav align-items-center ml-5 mr-5">
 					<li class="nav-item dropdown">
@@ -60,9 +61,10 @@
 								<i class="fas fa-user"></i> <?php echo Yii::app()->user->name ?>
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdownUser">
-								<a class="dropdown-item" href="/index.php?r=post/create"><i class="fas fa-file-medical"></i> Adicionar Post</a>
-								<a class="dropdown-item" href="/index.php?r=post/meusPosts"><i class="fas fa-file-alt"></i> Meus Posts</a>
-								<a class="dropdown-item" href="/index.php?r=site/logout"><i class="fas fa-sign-out-alt"></i> Sair</a>
+								<a class="dropdown-item" href="/index.php?r=post/cadastro"><i class="fas fa-fw fa-file-medical"></i> Adicionar Post</a>
+								<a class="dropdown-item" href="/index.php?r=post/meusPosts"><i class="fas fa-fw fa-file-alt"></i> Meus Posts</a>
+								<a class="dropdown-item" href="/index.php?r=usuario/editar"><i class="fas fa-fw fa-user-edit"></i> Meus Dados</a>
+								<a class="dropdown-item" href="/index.php?r=site/logout"><i class="fas fa-fw fa-sign-out-alt"></i> Sair</a>
 							</div>
 						<?php } ?>
 					</li>
