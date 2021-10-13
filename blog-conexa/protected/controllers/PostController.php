@@ -77,7 +77,7 @@ class PostController extends GxController {
 				// 'with' => 'categoria',
 			),
 			'pagination' => array(
-				'pageSize' => 1
+				'pageSize' => 10
 		)));
 		$this->render('index', array(
 			'titulo' => 'Posts',
